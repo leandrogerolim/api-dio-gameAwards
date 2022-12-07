@@ -25,6 +25,12 @@ public class GameServiceimpl implements GameService {
         Optional<game> game = repository.findById(id);
         return game.orElseThrow(() -> new NoContentException());
 
+       // if (game.isPresent()) {  posso fazer com o if o lambda ali em cima
+        //    return game.get();
+       //     }else {
+         //   throw new NoContentException;
+    //    }
+
     }
 
     @Override
