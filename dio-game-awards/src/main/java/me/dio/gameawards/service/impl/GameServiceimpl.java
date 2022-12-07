@@ -3,9 +3,11 @@ package me.dio.gameawards.service.impl;
 import me.dio.gameawards.domain.model.game;
 import me.dio.gameawards.domain.model.gameRepository;
 import me.dio.gameawards.service.GameService;
+import me.dio.gameawards.service.exception.NoContentException;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
+import java.util.Optional;
 
 public class GameServiceimpl implements GameService {
 
@@ -14,12 +16,15 @@ public class GameServiceimpl implements GameService {
     private gameRepository repository;
     @Override
     public List<game> findAll() {
-        return null;
+       List<game> games =  repository.findAll();
+        return games;
     }
 
     @Override
     public game findByid(Long id) {
-        return null;
+        Optional<game> game = repository.findById(id);
+        return game.orElseThrow(() -> new NoContentException());
+
     }
 
     @Override
