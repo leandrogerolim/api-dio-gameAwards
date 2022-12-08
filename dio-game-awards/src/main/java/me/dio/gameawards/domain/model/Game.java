@@ -3,9 +3,9 @@ package me.dio.gameawards.domain.model;
 import jakarta.persistence.*;
 
 
-@Entity(name = "games")
+@Entity(name = "GAMES")
 
-public class game {
+public class Game {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,7 +16,6 @@ public class game {
     private String description;
     private String cover;
     private long votes;
-
     public Long getId() {
         return id;
     }

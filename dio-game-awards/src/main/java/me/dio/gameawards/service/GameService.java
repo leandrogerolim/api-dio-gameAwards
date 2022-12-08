@@ -1,17 +1,15 @@
 package me.dio.gameawards.service;
-
-import me.dio.gameawards.domain.model.game;
-
+import me.dio.gameawards.domain.model.Game;
 import java.util.List;
 
 public interface GameService {
-    List<game> findAll();
+    List<Game> findAll();
 
-    game findByid(Long id);
+    Game findByid(Long id);
 
-    void insert(game Game);
+    void insert(Game Game);
 
-    void update(Long id, game Game);
+    void update(Long id, Game Game);
 
     void delete(Long id);
 
