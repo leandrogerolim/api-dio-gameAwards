@@ -2,12 +2,11 @@ package me.dio.gameawards.controller;
 
 
 import me.dio.gameawards.domain.model.Game;
+import me.dio.gameawards.domain.model.gameRepository;
 import me.dio.gameawards.service.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -16,9 +15,8 @@ public class GameRestController {
 
 @Autowired
     private   GameService businessLayer;
-
-
-
+    @Autowired
+    private me.dio.gameawards.domain.model.gameRepository gameRepository;
 
 
     @GetMapping("games")
@@ -31,4 +29,20 @@ public class GameRestController {
         Game game = businessLayer.findByid(id);
         return ResponseEntity.ok(game);
     }
+    @PostMapping("games")
+    public ResponseEntity<Game> insert(@RequestBody Game game){
+        businessLayer.insert(game);
+        return ResponseEntity.ok(game);
+    }
+    @PostMapping("games/{id}")
+    public ResponseEntity<Game> update(@PathVariable Long id, @RequestBody Game game){
+        businessLayer.update(id, game);
+        return ResponseEntity.ok(game);
+    }
+    @DeleteMapping("games/{id}")
+    public ResponseEntity<Game> delete(@PathVariable Long id){
+        businessLayer.delete(id);
+        return ResponseEntity.ok().build();
+    }
+
 }
