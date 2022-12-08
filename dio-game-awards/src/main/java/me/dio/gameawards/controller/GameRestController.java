@@ -14,11 +14,10 @@ import java.util.List;
 public class GameRestController {
 
 @Autowired
-    private  final GameService businessLayer;
+    private   GameService businessLayer;
 
-    public GameRestController(GameService businessLayer) {
-        this.businessLayer = businessLayer;
-    }
+
+
 
 
     @GetMapping("GAMES")

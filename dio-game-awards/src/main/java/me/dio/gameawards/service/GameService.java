@@ -7,9 +7,9 @@ public interface GameService {
 
     Game findByid(Long id);
 
-    void insert(Game Game);
+    void insert(Game game);
 
-    void update(Long id, Game Game);
+    void update(Long id, Game game);
 
     void delete(Long id);
 

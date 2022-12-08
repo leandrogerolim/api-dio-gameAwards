@@ -6,11 +6,12 @@ import me.dio.gameawards.service.GameService;
 import me.dio.gameawards.service.exception.BusinessException;
 import me.dio.gameawards.service.exception.NoContentException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
-
+@Service
 public class GameServiceimpl implements GameService {
 
     @Autowired
@@ -18,7 +19,7 @@ public class GameServiceimpl implements GameService {
     private gameRepository repository;
     @Override
     public List<Game> findAll() {
-       List<Game> games =  repository.findAll();
+       List<Game> games=repository.findAll();
         return games;
     }
 
