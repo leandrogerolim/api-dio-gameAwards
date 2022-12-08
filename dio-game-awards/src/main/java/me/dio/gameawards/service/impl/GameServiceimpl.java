@@ -18,14 +18,12 @@ public class GameServiceimpl implements GameService {
 
     private gameRepository repository;
     @Override
-    public List<Game> findAll() {
+        public List<Game> findAll() {
        List<Game> games=repository.findAll();
-
         return games;
     }
 
     @Override
-
     public Game findByid(Long id) {
         Optional<Game> game = repository.findById(id);
         return game.orElseThrow(() -> new NoContentException());
