@@ -5,7 +5,10 @@ export function VotesScreen(){
     return (
         <View>
 
-            <Text>Exodia Obliterar é ç ã teste</Text>
+            <Text>
+                <StyleSheet>Exodia Obliterar é ç ã teste</StyleSheet>
+                
+            </Text>
         </View>
     )
 }
