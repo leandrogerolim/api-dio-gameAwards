@@ -24,6 +24,7 @@ public class GameServiceimpl implements GameService {
         return games;
     }
 
+
     @Override
     public Game findByid(Long id) {
         Optional<Game> game = repository.findById(id);
