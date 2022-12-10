@@ -4,7 +4,7 @@ import {View, Text, StyleSheet, ImageBackground } from 'react-native';
 export function WinnerScreen (){
     return(
     <View style={styles.container}>
-        <Text>Winner Works!!!!</Text>
+        <Text>Winner Works!!</Text>
     </View>
     )
 }
