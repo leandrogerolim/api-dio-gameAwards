@@ -5,7 +5,7 @@ export function VotesScreen(){
     return (
         <View style={styles.container}>
             <Text>
-                Exodia Obliterar é ç ã teste          
+                Exodia Obliterar teste          
             </Text>
         </View>
     )
@@ -13,6 +13,9 @@ export function VotesScreen(){
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        backgroudColor:'#191919'
+        color:'#fff',
+        backgroundColor:'#191919',
+        alignItems:'center',
+        justifyContent:'center'
     }
 })
