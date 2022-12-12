@@ -10,7 +10,7 @@ export function VotesScreen(){
         (async ()=> {
             const response = await clientGetGames()
             setGameList(response)
-            console.log(gameList)
+            
         })()
 
     },[])
