@@ -1,22 +1,43 @@
 import React from "react";
-import {View, Text, StyleSheet, Image} from 'react-native'
+import {View, Text, StyleSheet, Image,Button, Alert} from 'react-native'
+
+const sendingVote = (id:number)=> {
+    Alert.alert(
+        "Vote Send",
+        "thanks for helping decide game of the year",
+        [
+            {text: 'OK', onPress:()=> clientSendingVotes(id)}
+        ]
+    )
+
+}
 
 export function GameCard(){
  return(
-    <View style={style.Cardcontainer}>
+    <View style={styles.Cardcontainer}>
         <View>
         <Image
             source = {{uri:''}}
-            style = {style.card}
+            style = {styles.card}
         />
-        
+        </View>
+
+        <View style= {styles.infoContainer}>
+            <Text style = {styles.infoContainer}>PACMAN</Text>
+            <Button
+                onPress={()=> sendingVote()}
+                title = 'Vote'
+                color = '#9AC33C'
+            />
+
+
         </View>
 
     </View>
  )
 }
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
     Cardcontainer:{
         borderWidth:2,
         padding:10,
