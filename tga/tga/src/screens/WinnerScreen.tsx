@@ -10,7 +10,7 @@ interface gameProps{
   name:"--",
   description:"--",
   cover:"",
-  votes: 0,
+  votes: 0
 }
 
 export function WinnerScreen(){
@@ -20,7 +20,7 @@ export function WinnerScreen(){
     name:"--",
     description:"--",
     cover:"",
-    votes: 0,
+    votes: 0
   });
 
   useFocusEffect(
@@ -28,9 +28,9 @@ export function WinnerScreen(){
       (async () => {
         const winner = await clientGetWinner()
         setGame(winner)
-      })()
+      })();
     },[])
-  )
+  );
 
   return(
     <View style={styles.container}>
