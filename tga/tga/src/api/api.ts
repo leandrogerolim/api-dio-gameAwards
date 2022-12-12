@@ -7,7 +7,7 @@ export async function clientGetGames(){
 
     const response = await fetch(`${baseApiURL}games`)
     const json = await response.json()
-    console.log(json)
+   
     return json
 }
 export async function clientSendingVotes(id:number){

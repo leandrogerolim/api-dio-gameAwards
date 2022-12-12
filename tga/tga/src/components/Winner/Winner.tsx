@@ -8,7 +8,7 @@ export function Winner(props: gameInterface | any){
     <View style={styles.container}>
       
       <Image 
-        source={{uri: props.cover}}
+        source={{uri:props.cover}}
         style={styles.card} 
       />
       <Text style={styles.gameLabel}>Votes: {props.votes}</Text>
