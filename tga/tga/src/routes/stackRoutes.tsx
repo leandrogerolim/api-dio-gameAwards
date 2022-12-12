@@ -10,7 +10,7 @@ export function StackRoutes(){
   return (
     <Navigator
     screenOptions={({ route }) => ({
-      headerShown: false,
+      headerShown: true,
       tabBarStyle: {
         height: 70,
         paddingHorizontal: 2,
