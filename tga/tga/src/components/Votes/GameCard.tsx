@@ -14,7 +14,7 @@ const sendingVote = (id:number)=> {
 
 }
 
-export function GameCard(props: gameInterface){
+export function GameCard(props: gameInterface | any){
  return(
     <View style={styles.Cardcontainer}>
         <View>
