@@ -1,12 +1,14 @@
-import React from "react";
-import {View, Text, StyleSheet, Image,Button, Alert, ProgressViewIOSComponent} from 'react-native'
+import React,{useState} from "react";
+import {View, Text, StyleSheet, Image,Button, Alert, ProgressViewIOSComponent,RefreshControl} from 'react-native'
 import {clientSendingVotes} from'../../api/api'
 import { gameInterface } from "../../interfaces/gameInterface";
+
+
 
 const sendingVote = (id:number)=> {
     Alert.alert(
         "Vote Send",
-        "thanks for helping decide game of the year",
+        "Thanks for helping decide game of the year",
         [
             {text: 'OK', onPress:()=> clientSendingVotes(id)}
         ]
@@ -15,6 +17,9 @@ const sendingVote = (id:number)=> {
 }
 
 export function GameCard(props: gameInterface | any){
+
+  
+
  return(
     <View style={styles.Cardcontainer}>
         <View>

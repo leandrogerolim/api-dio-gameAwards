@@ -3,8 +3,14 @@ import {View, Text, StyleSheet, ImageBackground, ScrollView } from 'react-native
 import {GameCard} from '../components/Votes/GameCard'
 import { Header } from '../components/Votes/Header';
 import { clientGetGames } from '../api/api';
+import { RefreshControl } from 'react-native';
 
 export function VotesScreen(){
+    const[atualizando,setAtualizando]= useState(false)
+    function aoAtualizar(){
+        setAtualizando(true)
+        setTimeout(()=>{setAtualizando(false)},3000)
+    }
     const [ gameList, setGameList] = useState([{}])
     useEffect (()=>{
         (async ()=> {
@@ -17,10 +23,21 @@ export function VotesScreen(){
     return (
         <View style={styles.container}>
             <Header/>
-            <ScrollView style={styles.gameArea}>
+           
+            <ScrollView style={styles.gameArea}
+                
+                refreshControl ={
+                    <RefreshControl
+                        refreshing={atualizando}
+                        onRefresh={aoAtualizar}
+                    />
+                }
+
+                >
                 {gameList.map(game => GameCard(game))}
-            </ScrollView>
+           </ScrollView>
         </View>
+       
     )
 }
 const styles = StyleSheet.create({
@@ -38,3 +55,4 @@ const styles = StyleSheet.create({
       width:'100%'
     }
   });
+  
