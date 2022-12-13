@@ -10,10 +10,15 @@ import { gameInterface } from '../interfaces/gameInterface';
 
 export function VotesScreen(){
     const[atualizando,setAtualizando]= useState(false)
+    
     function aoAtualizar(){
         setAtualizando(true)
         console.log('até aqui veio')
-       
+             
+            const response = clientGetGames()
+            
+    
+   
         setTimeout(()=>{setAtualizando(false)},2000)
                 
     }
