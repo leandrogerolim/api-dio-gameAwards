@@ -13,7 +13,6 @@ export function VotesScreen(){
  
     
     const[atualizando,setAtualizando]= useState(false)
-    
     function aoAtualizar(){
         setAtualizando(true)
         console.log('até aqui veio')
@@ -24,7 +23,7 @@ export function VotesScreen(){
     }
    
     
-    const [ gameList, setGameList] = useState([{}])
+    const [gameList, setGameList] = useState([{}])
     useEffect (()=>{
         (async ()=> {
             const response = await clientGetGames()
@@ -53,8 +52,7 @@ export function VotesScreen(){
 
                 >
                 {gameList.map(game => GameCard(game))}
-               
-           </ScrollView>
+                 </ScrollView>
          
         </View>
        
