@@ -4,13 +4,19 @@ import {GameCard} from '../components/Votes/GameCard'
 import { Header } from '../components/Votes/Header';
 import { clientGetGames } from '../api/api';
 import { RefreshControl } from 'react-native';
+import { ProgressViewIOSComponent } from 'react-native';
 
 export function VotesScreen(){
     const[atualizando,setAtualizando]= useState(false)
     function aoAtualizar(){
         setAtualizando(true)
-        setTimeout(()=>{setAtualizando(false)},3000)
+        console.log('até aqui veio')
+        Header
+        setTimeout(()=>{setAtualizando(false)},2000)
+                
     }
+   
+    
     const [ gameList, setGameList] = useState([{}])
     useEffect (()=>{
         (async ()=> {
@@ -30,12 +36,17 @@ export function VotesScreen(){
                     <RefreshControl
                         refreshing={atualizando}
                         onRefresh={aoAtualizar}
+                        
+                        
                     />
+                    
                 }
 
                 >
                 {gameList.map(game => GameCard(game))}
+               
            </ScrollView>
+         
         </View>
        
     )
