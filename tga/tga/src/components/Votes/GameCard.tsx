@@ -10,7 +10,10 @@ const sendingVote = (id:number)=> {
         "Vote Send",
         "Thanks for helping decide game of the year",
         [
-            {text: 'OK', onPress:()=> clientSendingVotes(id)}
+            {text: 'OK', onPress:()=> clientSendingVotes(id)},
+
+                       
+
         ]
     )
 
@@ -29,17 +32,28 @@ export function GameCard(props: gameInterface | any){
         />
         </View>
 
+        
+
+
+
+
+        
+
         <View style= {styles.infoContainer}>
             <Text style = {styles.infoContainer}>{props.name}</Text>
             <Button
                 onPress={()=> sendingVote(props.id)}
                 title = 'Vote'
+               
                 color = '#9AC33C'
             />
+            <Text style={styles.infoContainer}>Votes: {props.votes}</Text>
+            
 
 
         </View>
 
+  
     </View>
  )
 }

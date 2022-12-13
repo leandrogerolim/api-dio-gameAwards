@@ -4,14 +4,14 @@ import {GameCard} from '../components/Votes/GameCard'
 import { Header } from '../components/Votes/Header';
 import { clientGetGames } from '../api/api';
 import { RefreshControl } from 'react-native';
-import { ProgressViewIOSComponent } from 'react-native';
+import { } from '../components/Votes/GameCard'
 
 export function VotesScreen(){
     const[atualizando,setAtualizando]= useState(false)
     function aoAtualizar(){
         setAtualizando(true)
         console.log('até aqui veio')
-        Header
+       
         setTimeout(()=>{setAtualizando(false)},2000)
                 
     }
