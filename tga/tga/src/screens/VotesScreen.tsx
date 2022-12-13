@@ -1,26 +1,26 @@
-import React, {useEffect, useState} from 'react';
+import React, {Component, useEffect, useState, } from 'react';
 import {View, Text, StyleSheet, ImageBackground, ScrollView } from 'react-native';
 import {GameCard} from '../components/Votes/GameCard'
 import { Header } from '../components/Votes/Header';
 import { clientGetGames } from '../api/api';
 import { RefreshControl } from 'react-native';
 import { } from '../components/Votes/GameCard';
-
+import { Routes } from '../../src/routes';
 import { gameInterface } from '../interfaces/gameInterface';
 
 export function VotesScreen(){
+
+ 
+    
     const[atualizando,setAtualizando]= useState(false)
     
     function aoAtualizar(){
         setAtualizando(true)
         console.log('até aqui veio')
-             
-            const response = clientGetGames()
-            
-    
-   
-        setTimeout(()=>{setAtualizando(false)},2000)
-                
+       
+        setTimeout(()=>{setAtualizando(false)},2000,)
+        
+        
     }
    
     
@@ -40,8 +40,10 @@ export function VotesScreen(){
             <ScrollView style={styles.gameArea}
                 
                 refreshControl ={
+                  
                     <RefreshControl
                         refreshing={atualizando}
+                    
                         onRefresh={aoAtualizar}
                         
                         

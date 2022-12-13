@@ -3,6 +3,7 @@ import {View, Text, StyleSheet, Image,Button, Alert, ProgressViewIOSComponent,Re
 import {clientSendingVotes} from'../../api/api'
 import { gameInterface } from "../../interfaces/gameInterface";
 import { clientGetGames  } from '../../api/api';
+import { VotesScreen } from "../../screens/VotesScreen";
 
 
 const sendingVote = (id:number)=> {
@@ -11,23 +12,31 @@ const sendingVote = (id:number)=> {
         "Thanks for helping decide game of the year",
         [
             {text: 'OK', onPress:( )=> clientSendingVotes(id)},
-
+          
            
 
                        
 
         ]
+        
     )
 
 }
 
 
 export function GameCard(props: gameInterface | any){
-
   
-
+  function tick(){                        
+    props.votes
+       }
+   setInterval(tick,1000)
+   tick()
  return(
+  
+ 
+  
     <View style={styles.Cardcontainer}>
+        
         <View>
         <Image
             source = {{uri: props.cover}}
@@ -37,26 +46,29 @@ export function GameCard(props: gameInterface | any){
 
         
 
-        
 
-        
 
         <View style= {styles.infoContainer}>
             <Text style = {styles.infoContainer}>{props.name}</Text>
             <Button
                 onPress={()=> sendingVote(props.id)}
                 title = 'Vote'
-               
+                
                 color = '#9AC33C'
             />
-            <Text style={styles.infoContainer}>Votes: {props.votes}</Text>
-            
+          
 
         </View>
+           
+   
+        
 
   
     </View>
+   
+    
  )
+ 
 }
 
 const styles = StyleSheet.create({
