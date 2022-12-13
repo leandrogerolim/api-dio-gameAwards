@@ -4,7 +4,9 @@ import {GameCard} from '../components/Votes/GameCard'
 import { Header } from '../components/Votes/Header';
 import { clientGetGames } from '../api/api';
 import { RefreshControl } from 'react-native';
-import { } from '../components/Votes/GameCard'
+import { } from '../components/Votes/GameCard';
+
+import { gameInterface } from '../interfaces/gameInterface';
 
 export function VotesScreen(){
     const[atualizando,setAtualizando]= useState(false)

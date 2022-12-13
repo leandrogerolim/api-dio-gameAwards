@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import {View, Text, StyleSheet, Image,Button, Alert, ProgressViewIOSComponent,RefreshControl} from 'react-native'
 import {clientSendingVotes} from'../../api/api'
 import { gameInterface } from "../../interfaces/gameInterface";
-
+import { clientGetGames  } from '../../api/api';
 
 
 const sendingVote = (id:number)=> {
@@ -10,7 +10,9 @@ const sendingVote = (id:number)=> {
         "Vote Send",
         "Thanks for helping decide game of the year",
         [
-            {text: 'OK', onPress:()=> clientSendingVotes(id)},
+            {text: 'OK', onPress:( )=> clientSendingVotes(id)},
+
+           
 
                        
 
@@ -18,6 +20,7 @@ const sendingVote = (id:number)=> {
     )
 
 }
+
 
 export function GameCard(props: gameInterface | any){
 
@@ -34,8 +37,7 @@ export function GameCard(props: gameInterface | any){
 
         
 
-
-
+        
 
         
 
@@ -49,7 +51,6 @@ export function GameCard(props: gameInterface | any){
             />
             <Text style={styles.infoContainer}>Votes: {props.votes}</Text>
             
-
 
         </View>
 
