@@ -3,7 +3,7 @@
 
 ## Registra o voto e informa o vencedor: 
 ![image](https://user-images.githubusercontent.com/92825608/207417365-5562e1bf-5f5a-418d-b195-70c381cf026f.png)/
-![image](https://user-images.githubusercontent.com/92825608/207417194-304cb876-6aab-4cb7-aa7a-827bca047fc2.png)
+![image](https://user-images.githubusercontent.com/92825608/207622185-7620df61-89e4-4697-9e38-a09663b97c43.png)
 
 
 
