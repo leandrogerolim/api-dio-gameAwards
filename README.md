@@ -43,7 +43,7 @@
 
 ![image](https://user-images.githubusercontent.com/92825608/207420591-00fee7bb-7e5e-457b-bdba-7593dc6adcaf.png)
 
-####E rodar o projeto java para utilizar o banco de dados.
+#### E rodar o projeto java para utilizar o banco de dados.
 
 ![image](https://user-images.githubusercontent.com/92825608/207420466-6c88596a-bb54-4474-895e-e1457bfb6a9e.png)
 
@@ -53,7 +53,7 @@
     
 ### Utilizado:
 
-- java 17
+- Java 17
 - React native 
 - H2 database 
 - SpringBoot
