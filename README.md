@@ -1,3 +1,26 @@
+# Projeto para fazer uma tela do Game Awards.
+
+
+## Registra o voto e informa o vencedor: 
+![image](https://user-images.githubusercontent.com/92825608/207417365-5562e1bf-5f5a-418d-b195-70c381cf026f.png)/
+![image](https://user-images.githubusercontent.com/92825608/207622507-77036c81-ccc8-4e7c-85f3-dec7a2229b9e.png)
+
+
+
+
+### Utilizando o Swagger:
+![image](https://user-images.githubusercontent.com/92825608/207416203-aa8ad24d-2b81-4651-b29f-edd8f97245d9.png)
+
+
+- [x] Mostra a lista de todos os indicados
+- [x] Registra os votos.
+- [x] Soma e mostra o vencedor.
+- [ ] Atualizar a tela após registar o voto
+- [ ] Refresh na tela com o RefreshControl
+
+
+*********
+
 ## Template Usando Spring Boot Para Criação de APIs REST
 
    ### Projeto base (template) usando Java 17 e Spring Boot 3 com Spring Data para criação de APIs RESTful usando JPA (H2 configurado por padrão). 
@@ -8,3 +31,30 @@
 
 2. [DIO Fullstack Labs - Dia 2 (App React Native)](https://web.dio.me/lives/dio-fullstack-labs-dia-2)
     
+    
+    ******
+    ![image](https://user-images.githubusercontent.com/92825608/207418530-d021267d-388a-45f6-8350-afde2250bebd.png)
+
+
+  
+    ******
+
+#### Para rodar é necessário utilizar o comando "expo start" no terminal indicando a pasta "tga": 
+
+![image](https://user-images.githubusercontent.com/92825608/207420591-00fee7bb-7e5e-457b-bdba-7593dc6adcaf.png)
+
+#### E rodar o projeto java para utilizar o banco de dados.
+
+![image](https://user-images.githubusercontent.com/92825608/207420466-6c88596a-bb54-4474-895e-e1457bfb6a9e.png)
+
+  
+
+******
+    
+### Utilizado:
+
+- Java 17
+- React native 
+- H2 database 
+- SpringBoot
+- Swagger
